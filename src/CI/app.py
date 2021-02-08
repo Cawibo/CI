@@ -11,7 +11,7 @@ def index():
 
 @app.route("/webhook", methods=['POST'])
 def github_webhook_handler():
-    print(request.form)
+    print(request.form['payload'])
     return "Just reflecting data\n" + str(["{}:{}".format(x, y) for x, y in request.form.items()])
 
 
