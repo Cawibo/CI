@@ -1,5 +1,6 @@
 import unittest
-import app
+from src.CI import app
+
 
 class TestStringMethods(unittest.TestCase):
 
@@ -7,8 +8,4 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual('foo'.upper(), 'FOO')
 
     def test_index(self):
-        self.assertEqual("Hello :)",app.index())
-
-
-if __name__ == '__main__':
-    unittest.main()
+        self.assertEqual("Hello :)", app.index())
